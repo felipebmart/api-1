@@ -23,10 +23,10 @@ node('php'){
         )
     }
     stage('Docker Build') {
-        sh 'docker build -t felipebmart/api-1:$BUILD_NUMBER .'
+        sh 'docker build -t mobdrops/api:$BUILD_NUMBER .'
     }
     
     stage('Docker Ship') {
-        sh 'docker push felipebmart/api-1:$BUILD_NUMBER'
+        sh 'docker push mobdrops/api:$BUILD_NUMBER'
     }
 }
